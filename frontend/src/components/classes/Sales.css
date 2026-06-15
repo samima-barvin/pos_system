@@ -1,0 +1,290 @@
+/* Core Structural Layout Variables matching the Theme precisely */
+.sales-wrapper, .sales-wrapper * {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sales-wrapper {
+  background-color: #e4e4ef; /* Background */
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.sales-layout {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Common Container Definition */
+.sales-container {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 15px rgba(32, 30, 69, 0.1);
+}
+
+/* CONTAINER 1: Meta Configuration Alignment Matrix */
+.meta-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  border-top: 4px solid #201e45; /* Primary accent band */
+}
+
+/* Form Styling Rules */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #404267; /* Secondary */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input, 
+.form-group select {
+  padding: 10px 14px;
+  border: 1px solid #404267;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #201e45;
+  background: #ffffff;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+  border-color: #201e45;
+  box-shadow: 0 0 0 3px rgba(32, 30, 69, 0.15);
+}
+
+/* CONTAINER 2: Interactive Dynamic Grid Area */
+.processing-box {
+  border-top: 4px solid #404267;
+}
+
+.product-search-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+  margin-bottom: 25px;
+}
+
+.search-input { flex: 2; min-width: 280px; }
+.qty-counter { flex: 0.5; min-width: 140px; }
+
+/* Custom Incrementor Setup */
+.counter-controls {
+  display: flex;
+  border: 1px solid #404267;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.counter-controls button {
+  background: #e4e4ef;
+  border: none;
+  width: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #201e45;
+  cursor: pointer;
+}
+
+.counter-controls button:hover { background: #404267; color: #fff; }
+
+.counter-controls input {
+  width: 100%;
+  border: none !important;
+  border-radius: 0 !important;
+  text-align: center;
+  padding: 8px 0;
+}
+
+/* Action Button Triggers */
+.add-line-btn {
+  background-color: #404267; /* Secondary */
+  color: white;
+  border: none;
+  padding: 11px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  height: 41px;
+  transition: background 0.2s;
+}
+
+.add-line-btn:hover { background-color: #201e45; }
+
+/* Dynamic In-line Sales Grid Table */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 25px;
+  border: 1px solid #e4e4ef;
+  border-radius: 8px;
+}
+
+.sales-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.sales-table th {
+  background-color: #201e45; /* Primary */
+  color: white;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sales-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e4e4ef;
+  vertical-align: middle;
+  color: #201e45;
+}
+
+.empty-row { text-align: center; color: #404267; font-style: italic; padding: 30px !important; }
+.prod-title { font-weight: 600; }
+.barcode-tag { background: #e4e4ef; padding: 2px 6px; border-radius: 4px; font-size: 11px; }
+
+.table-input {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #404267;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.row-del-btn {
+  background: none;
+  border: none;
+  color: #f07b7b; /* Accent */
+  font-size: 22px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.row-del-btn:hover { color: red; }
+
+/* Financial Calculation Blocks */
+.summary-section {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 25px;
+  padding-top: 15px;
+  border-top: 2px dashed #e4e4ef;
+}
+
+.summary-block {
+  width: 100%;
+  max-width: 450px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 15px;
+  color: #404267;
+}
+
+.tax-breakdown {
+  font-size: 13px;
+  color: #707293;
+  border-bottom: 1px solid #e4e4ef;
+  padding-bottom: 12px;
+}
+
+.grand-total {
+  font-size: 22px;
+  font-weight: 700;
+  color: #201e45;
+  padding-top: 12px;
+}
+
+/* Page Control Footer System */
+.actions-section {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-cancel { background-color: #f07b7b; color: white; } /* Accent */
+.btn-cancel:hover { background-color: #d65f5f; }
+
+.btn-save { background-color: #404267; color: white; } /* Secondary */
+.btn-save:hover { background-color: #201e45; }
+
+.btn-print { background-color: #201e45; color: white; } /* Primary */
+.btn-print:hover { background-color: #12102b; }
+
+/* SCREEN VISIBILITY RULES CONTROLLING SYSTEM EMULATION */
+.print-only { display: none; }
+
+/* --- NATIVE 2-INCH PRINTER SYSTEM DRIVER OVERRIDES --- */
+@media print {
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+  
+  body, .sales-wrapper {
+    background: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Emulates absolute 2-inch width boundaries exactly */
+  .thermal-receipt-strip {
+    width: 2in;
+    max-width: 2in;
+    padding: 0.1in 0.05in;
+    font-family: monospace;
+    font-size: 11px;
+    line-height: 1.2;
+    color: #000000;
+    background: #ffffff;
+  }
+
+  .receipt-header { text-align: center; margin-bottom: 8px; }
+  .receipt-header h3 { margin: 0 0 4px 0; font-size: 14px; }
+  .receipt-header p { margin: 0; font-size: 10px; }
+  .receipt-meta { font-size: 10px; margin-bottom: 6px; }
+  
+  .receipt-divider {
+    text-align: center;
+    margin: 4px 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .receipt-table { width: 100%; border-collapse: collapse; margin-bottom: 6px; }
+  .receipt-table th { text-align: left; border-bottom: 1px dashed #000; font-size: 10px; padding: 2px 0; }
+  .receipt-table td { padding: 3px 0; font-size: 11px; vertical-align: top; }
+  
+  .receipt-summary { margin-top: 4px; }
+  .receipt-row { display: flex; justify-content: space-between; font-size: 10px; padding: 1px 0; }
+  .receipt-grand { font-size: 13px; font-weight: bold; border-top: 1px dashed #000; padding-top: 4px; margin-top: 2px; }
+  .receipt-footer { text-align: center; margin-top: 15px; font-size: 10px; }
+}
